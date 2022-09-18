@@ -661,7 +661,7 @@ input[type="button"] {
 	padding: 0 3rem;
 	margin: 0 .3rem 1.2rem 0;
 	background: #d8d8d8;
-	color: #313131;
+	color: white;
 	text-decoration: none;
 	cursor: pointer;
 	text-align: center;
@@ -685,7 +685,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
 	background: #bebebe;
-	color: #000000;
+	color: white;
 	outline: 0;
 }
 .button.button-primary,
@@ -1294,7 +1294,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/bg.jpg) no-repeat center bottom;
+	background: white url(../images/bg.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2096,7 +2096,7 @@ header .logo a {
 	margin-left: -40px;
 }
 .section-ads h2 a, .section-ads h2 a:visited {
-	color: #313131;
+	color: white;
 }
 .section-ads span {
 	color: #3F0D39;
