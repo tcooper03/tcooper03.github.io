@@ -619,6 +619,25 @@ label > input[type="checkbox"], label > input[type="radio"] {
 	top: .15rem;
 }
 
+/**
+ * Style Placeholder Text  
+ * -
+ */
+::-webkit-input-placeholder {
+	color: #a1a1a1;
+}
+:-moz-placeholder {
+	color: #a1a1a1;  /* Firefox 18- */
+}
+::-moz-placeholder {
+	color: #a1a1a1;  /* Firefox 19+ */
+}
+:-ms-input-placeholder {
+	color: #a1a1a1;
+}
+.placeholder {
+	color: #a1a1a1 !important;
+}
 
 /** 
  * ===================================================================
@@ -626,10 +645,12 @@ label > input[type="checkbox"], label > input[type="radio"] {
  *
  * ------------------------------------------------------------------- 
  */
-
-.download-cv-button {
-	color: white;
-	border: 3px solid #008cff;
+.button,
+a.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
 	display: inline-block;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.4rem;
@@ -639,21 +660,90 @@ label > input[type="checkbox"], label > input[type="radio"] {
 	line-height: 5.4rem;
 	padding: 0 3rem;
 	margin: 0 .3rem 1.2rem 0;
+	background: #d8d8d8;
+	color: #313131;
 	text-decoration: none;
 	cursor: pointer;
 	text-align: center;
 	white-space: nowrap;
-	border-color: #0069cc;
+	border: none;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-
-.download-cv-button:hover {
-	color: grey;
+.button:hover,
+a.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+	background: #bebebe;
+	color: #000000;
+	outline: 0;
 }
+.button.button-primary,
+a.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+	background: #313131;
+	color: #FFFFFF;
+}
+.button.button-primary:hover,
+a.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+	background: #1f1f1f;
+}
+button.full-width, .button.full-width {
+	width: 100%;
+	margin-right: 0;
+}
+button.medium, .button.medium {
+	height: 5.7rem !important;
+	line-height: 5.7rem !important;
+	padding: 0 1.8rem !important;
+}
+button.large, .button.large {
+	height: 6rem !important;
+	line-height: 6rem !important;
+	padding: 0rem 3rem !important;
+}
+button.stroke, .button.stroke {
+	background: transparent !important;
+	border: 3px solid #313131;
+	line-height: 4.8rem;
+}
+button.stroke.medium, .button.stroke.medium {
+	line-height: 5.1rem !important;
+}
+button.stroke.large, .button.stroke.large {
+	line-height: 5.4rem !important;
+}
+button.stroke:hover, .button.stroke:hover {
+	border: 3px solid #008cff;
+	color: #008cff;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
 
 /** 
  * ===================================================================
@@ -935,7 +1025,7 @@ label > input[type="checkbox"], label > input[type="radio"] {
 .grey-section p.lead {
 	color: #7d7d7d;
 }
-.section- {
+.section-intro {
 	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1204,7 +1294,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(https://images.unsplash.com/photo-1581837565439-ff14b5fa55da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat center bottom;
+	background: #151515 url(../images/bg.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -1273,7 +1363,7 @@ header .logo a {
 	text-align: center;
 	display: inline-block;
 	padding: 0 8px 0 14px;
-	color: rgba(255, 255, 255, 0.3);class="button st
+	color: rgba(255, 255, 255, 0.3);
 }
 .intro-content .intro-position span:first-child::before {
 	content: "|";
@@ -1292,7 +1382,6 @@ header .logo a {
 	font-size: 1.3rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
-
 }
 .intro-content .button:hover, .intro-content .button:focus {
 	border-color: #0069cc;
@@ -1329,7 +1418,6 @@ header .logo a {
 .intro-social li a:hover, .intro-social li a:focus {
 	color: #0069cc;
 }
-
 
 /**
  * responsive:
@@ -1423,7 +1511,8 @@ header .logo a {
 	float: left;
 }
 .intro-info .lead {
-	text-align: middle;
+	text-align: left;
+	padding-left: 13rem;
 }
 
 .about-content {
@@ -1473,6 +1562,35 @@ header .logo a {
 }
 .button-section [class*="col-"] .button:first-child {
 	margin-right: 4rem;
+}
+
+
+.download-cv-button {
+	color: white;
+	border: 3px solid #008cff;
+	display: inline-block;
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	height: 5.4rem;
+	line-height: 5.4rem;
+	padding: 0 3rem;
+	margin: 0 .3rem 1.2rem 0;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	border-color: #0069cc;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.download-cv-button:hover {
+	color: grey;
 }
 
 /**
