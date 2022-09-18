@@ -1566,7 +1566,7 @@ header .logo a {
 
 
 .download-cv-button {
-	color: white;
+	color: white !important;
 	border: 3px solid #008cff;
 	display: inline-block;
 	font-family: "poppins-bold", sans-serif;
@@ -1590,7 +1590,7 @@ header .logo a {
 }
 
 .download-cv-button:hover {
-	color: grey;
+	color: grey !important;
 }
 
 /**
