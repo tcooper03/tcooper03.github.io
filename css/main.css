@@ -1598,7 +1598,7 @@ header .logo a {
 }
 
 .download-cv-button:hover {
-	color: grey !important;
+	border-color: #00529e !important;
 }
 
 /**
