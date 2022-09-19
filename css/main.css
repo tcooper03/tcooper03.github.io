@@ -694,21 +694,29 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-	background: #313131;
+	background: transparent;
 	color: #FFFFFF;
+	border: 3px solid #008cff;
+	color: #008cff;
 }
 .button.button-primary:hover,
 a.button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
+input[type="button"].button-primary:hover {
+	border: 3px solid #0069cc;
+	color: #008cff;
+}
+
+
 .button.button-primary:focus,
 button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-	background: #1f1f1f;
+	border: 3px solid #008cff;
+	color: #008cff;
 }
 button.full-width, .button.full-width {
 	width: 100%;
